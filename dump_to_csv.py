@@ -7,8 +7,9 @@ from os.path import isfile
 parser = argparse.ArgumentParser(
     formatter_class = argparse.RawDescriptionHelpFormatter,
     description = "dump scrap data to a CSV or SVG",
-    epilog = "Example:\n$ python3 dump_to_csv.py data2.p"
-                )
+    epilog = '''Example:
+python3 dump_to_csv.py data2.p
+python3 dump_to_csv.py --type eps data2.p''')
 
 parser.add_argument("data_file", help="data file name")
 parser.add_argument("--debug", action='store_true', help="DEBUG level of logging")
@@ -303,6 +304,8 @@ fill
 100 2568 lll3 1 1 1 setrgbcolor (85% - 95%) 450 2568    text72
 100 2496 lll4 1 1 1 setrgbcolor (>95%) 450 2496    text72
 100 2424 lll5 1 1 1 setrgbcolor (full) 450 2424    text72
+
+(The busy vertical clusters are conferences etc.) 100 2280 text72
 
 % labels
 4 setlinewidth
